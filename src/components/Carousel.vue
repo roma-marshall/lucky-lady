@@ -1,5 +1,5 @@
 <template>
-  <carousel :items-to-show="1">
+  <carousel :items-to-show="1" :autoplay="3000" :transition="1000">
     <slide v-for="slide in 10" :key="slide">
 <!--      {{ slide }}-->
       <img class="rounded-lg" src="https://sweepstastic.blob.core.windows.net/uploads/assets/Desktop_50_Off_welcome_offer_min_1_189c8c9916.png" alt="">
