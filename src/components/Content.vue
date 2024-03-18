@@ -1,6 +1,7 @@
 <template>
   <div class="p-4 sm:ml-64 bg-[#191d32]">
     <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
+      <Carousel />
       <div class="grid grid-cols-3 gap-4 mb-4">
         <div class="flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
           <p class="text-2xl text-gray-400 dark:text-gray-500">
@@ -101,3 +102,7 @@
     </div>
   </div>
 </template>
+
+<script setup>
+import Carousel from './Carousel.vue'
+</script>
