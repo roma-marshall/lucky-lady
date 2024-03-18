@@ -84,13 +84,10 @@
         </button>
       </div>
     </aside>
-    <Content />
   </div>
 </template>
 
 <script setup>
-import Content from './Content.vue'
-
 const showMobile = () => {
   document.querySelector('#default-sidebar').classList.toggle('-translate-x-full')
   document.querySelector('#default-sidebar').classList.toggle('w-full')
