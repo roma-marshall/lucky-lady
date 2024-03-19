@@ -12,8 +12,13 @@
 
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 my-4 mx-2">
         <div v-for="item in topSlots" class="relative cursor-pointer" @click="openModal(item.name, item.imgScr)">
-          <div class="absolute right-1 top-1 z-50"><svg width="24" height="24" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg" aria-labelledby="favouriteIconTitle" stroke="wheat" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="red" color="#9f4c4c"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title id="favouriteIconTitle">Favourite</title> <path d="M12,21 L10.55,19.7051771 C5.4,15.1242507 2,12.1029973 2,8.39509537 C2,5.37384196 4.42,3 7.5,3 C9.24,3 10.91,3.79455041 12,5.05013624 C13.09,3.79455041 14.76,3 16.5,3 C19.58,3 22,5.37384196 22,8.39509537 C22,12.1029973 18.6,15.1242507 13.45,19.7149864 L12,21 Z"></path> </g></svg></div>
-          <img class="aspect-square rounded-lg" :src="item.imgScr" alt="games">
+          <div v-if="item.isAvailable" class="absolute right-1 top-1 z-50">
+            <Favorite />
+          </div>
+          <div v-else class="absolute right-1 top-1 z-50">
+            <Locked />
+          </div>
+          <img :class="{ 'opacity-50 saturate-50' : !item.isAvailable }" class="aspect-square rounded-lg" :src="item.imgScr" alt="games">
           <span class="text-white text-sm text-center">{{ item.name }}</span>
         </div>
       </div>
@@ -25,9 +30,14 @@
       </div>
 
       <div class="grid grid-cols-6 gap-4 my-4 mx-2">
-        <div v-for="item in popularGames" class="relative">
-          <div class="absolute right-1 top-1 z-50"><svg width="24" height="24" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg" aria-labelledby="favouriteIconTitle" stroke="wheat" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="red" color="#9f4c4c"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title id="favouriteIconTitle">Favourite</title> <path d="M12,21 L10.55,19.7051771 C5.4,15.1242507 2,12.1029973 2,8.39509537 C2,5.37384196 4.42,3 7.5,3 C9.24,3 10.91,3.79455041 12,5.05013624 C13.09,3.79455041 14.76,3 16.5,3 C19.58,3 22,5.37384196 22,8.39509537 C22,12.1029973 18.6,15.1242507 13.45,19.7149864 L12,21 Z"></path> </g></svg></div>
-          <img class="aspect-square rounded-lg" :src="item.imgScr" alt="games">
+        <div v-for="item in popularGames" class="relative cursor-pointer" @click="openModal(item.name, item.imgScr)">
+          <div v-if="item.isAvailable" class="absolute right-1 top-1 z-50">
+            <Favorite />
+          </div>
+          <div v-else class="absolute right-1 top-1 z-50">
+            <Locked />
+          </div>
+          <img :class="{ 'opacity-50 saturate-50' : !item.isAvailable }" class="aspect-square rounded-lg" :src="item.imgScr" alt="games">
           <span class="text-white text-sm text-center">{{ item.name }}</span>
         </div>
       </div>
@@ -38,9 +48,14 @@
       </div>
 
       <div class="grid grid-cols-6 gap-4 my-4 mx-2">
-        <div v-for="item in newGames" class="relative">
-          <div class="absolute right-1 top-1 z-50"><svg width="24" height="24" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg" aria-labelledby="favouriteIconTitle" stroke="wheat" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="red" color="#9f4c4c"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title id="favouriteIconTitle">Favourite</title> <path d="M12,21 L10.55,19.7051771 C5.4,15.1242507 2,12.1029973 2,8.39509537 C2,5.37384196 4.42,3 7.5,3 C9.24,3 10.91,3.79455041 12,5.05013624 C13.09,3.79455041 14.76,3 16.5,3 C19.58,3 22,5.37384196 22,8.39509537 C22,12.1029973 18.6,15.1242507 13.45,19.7149864 L12,21 Z"></path> </g></svg></div>
-          <img class="aspect-square rounded-lg" :src="item.imgScr" alt="games">
+        <div v-for="item in newGames" class="relative cursor-pointer" @click="openModal(item.name, item.imgScr)">
+          <div v-if="item.isAvailable" class="absolute right-1 top-1 z-50">
+            <Favorite />
+          </div>
+          <div v-else class="absolute right-1 top-1 z-50">
+            <Locked />
+          </div>
+          <img :class="{ 'opacity-50 saturate-50' : !item.isAvailable }" class="aspect-square rounded-lg" :src="item.imgScr" alt="games">
           <span class="text-white text-sm text-center">{{ item.name }}</span>
         </div>
       </div>
@@ -51,7 +66,9 @@
         <template #header>&nbsp;</template>
         <template #content>
           <div class="flex flex-col">
-            <div class="absolute right-1 top-1 z-50"><svg width="24" height="24" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg" aria-labelledby="favouriteIconTitle" stroke="wheat" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="red" color="#9f4c4c"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title id="favouriteIconTitle">Favourite</title> <path d="M12,21 L10.55,19.7051771 C5.4,15.1242507 2,12.1029973 2,8.39509537 C2,5.37384196 4.42,3 7.5,3 C9.24,3 10.91,3.79455041 12,5.05013624 C13.09,3.79455041 14.76,3 16.5,3 C19.58,3 22,5.37384196 22,8.39509537 C22,12.1029973 18.6,15.1242507 13.45,19.7149864 L12,21 Z"></path> </g></svg></div>
+            <div class="absolute right-1 top-1 z-50">
+              <Favorite />
+            </div>
             <img class="aspect-square rounded-lg" :src="img" alt="games">
             <span class="text-white text-lg text-center mt-4">{{ name }}</span>
             <span class="text-white text-sm text-center mt-4">Some descriptions</span>
@@ -79,6 +96,8 @@ import ModalComponent from './ModalComponent.vue'
 import Header from './Header.vue'
 import Carousel from './Carousel.vue'
 import MainMenu from './MainMenu.vue'
+import Favorite from './ui/Favorite.vue'
+import Locked from './ui/Locked.vue'
 
 const isModalOpened = ref(false)
 const name = ref('default')
@@ -103,26 +122,32 @@ const topSlots = ref([
   {
     name: 'Wild Tiger',
     imgScr: 'https://sweepstastic.blob.core.windows.net/uploads/assets/Wild_Tiger_296c54216c.png',
+    isAvailable: true,
   },
   {
     name: 'Pho Sho',
     imgScr: 'https://sweepstastic.blob.core.windows.net/uploads/assets/pho_sho_logo_1bc4757a1e.webp',
+    isAvailable: false,
   },
   {
     name: 'Classic Fantastic',
     imgScr: 'https://sweepstastic.blob.core.windows.net/uploads/assets/Classic_Fantastic_ce45d10045.png',
+    isAvailable: true,
   },
   {
     name: 'Tycoons Billionaire',
     imgScr: 'https://sweepstastic.blob.core.windows.net/uploads/assets/Tycoons_Billionaire_Bucks_e95cfed39c.png',
+    isAvailable: true,
   },
   {
     name: 'Wish granted',
     imgScr: 'https://sweepstastic.blob.core.windows.net/uploads/assets/wish_granted_ea8c02fda1.jpg',
+    isAvailable: false,
   },
   {
     name: 'Wild Cash',
     imgScr: 'https://sweepstastic.blob.core.windows.net/uploads/assets/Wild_Cash_x9990_9c3ad271a3.png',
+    isAvailable: true,
   }
 ])
 
@@ -130,26 +155,32 @@ const popularGames = ref([
   {
     name: 'Gemhalla',
     imgScr: 'https://sweepstastic.blob.core.windows.net/uploads/assets/Gemhalla_min_a1e6ae9dbc.png',
+    isAvailable: false,
   },
   {
     name: 'Fruit Million',
     imgScr: 'https://sweepstastic.blob.core.windows.net/uploads/assets/Fruit_Million_5b7100ff04.png',
+    isAvailable: false,
   },
   {
     name: 'Smoking Pistols',
     imgScr: 'https://sweepstastic.blob.core.windows.net/uploads/assets/Smoking_Pistols_6aa24af8a8.png',
+    isAvailable: true,
   },
   {
     name: 'Lucky 8',
     imgScr: 'https://sweepstastic.blob.core.windows.net/uploads/assets/Lucky_8_190x190_e23f35a547.png',
+    isAvailable: true,
   },
   {
     name: 'Book of Panda',
     imgScr: 'https://sweepstastic.blob.core.windows.net/uploads/assets/Book_of_Panda_Megaways_min_6ba0cc6a0d.png',
+    isAvailable: true,
   },
   {
     name: 'Hottest 666',
     imgScr: 'https://sweepstastic.blob.core.windows.net/uploads/assets/Hottest_666_b38eedba0f.png',
+    isAvailable: true,
   }
 ])
 
@@ -157,26 +188,32 @@ const newGames = ref([
   {
     name: 'TNT Bonanza',
     imgScr: 'https://sweepstastic.blob.core.windows.net/uploads/assets/TNT_Bonanza_5bd7a7b223.png',
+    isAvailable: true,
   },
   {
     name: 'Thai Blossom',
     imgScr: 'https://sweepstastic.blob.core.windows.net/uploads/assets/Thai_Blossom_ce761ccb40.png',
+    isAvailable: true,
   },
   {
     name: 'Flaming Fruits',
     imgScr: 'https://sweepstastic.blob.core.windows.net/uploads/assets/Flaming_Fruits_552a60d486.png',
+    isAvailable: false,
   },
   {
     name: 'Gemzagame',
     imgScr: 'https://sweepstastic.blob.core.windows.net/uploads/assets/gemzagame_2576e05af4.png',
+    isAvailable: false,
   },
   {
     name: 'Holly Bonanza',
     imgScr: 'https://sweepstastic.blob.core.windows.net/uploads/assets/Holly_Jolly_Bonanza_c0482422b5.png',
+    isAvailable: true,
   },
   {
     name: '88 Riches',
     imgScr: 'https://sweepstastic.blob.core.windows.net/uploads/assets/88_Riches_dfb46287d7.png',
+    isAvailable: true,
   }
 ])
 
