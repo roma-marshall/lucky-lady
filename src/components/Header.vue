@@ -1,27 +1,25 @@
 <template>
-  <div v-if="isLogged">
+  <div id="mainheader" class="" v-if="isLogged">
     <div class="hidden sm:flex flex-row justify-between mb-2 text-white">
       <div class="flex">
         <img width="150" src="/public/img1.png" alt="coins">
         <img width="150" class="mx-2" src="/public/img2.png" alt="coins">
-        <div class="p-px p-py rounded-full bg-gradient-to-b from-amber-600 to-yellow-400 max-w-fit mr-4 h-fit">
+        <div class="hidden lg:block p-px p-py rounded-full bg-gradient-to-b from-amber-600 to-yellow-400 max-w-fit mr-4 h-fit">
           <div class="bg-[#191d32] rounded-full">
             <a href="#" class="flex items-center p-2 rounded-full group">
               <button type="button" class="flex-1 whitespace-nowrap text-xs text-white uppercase">Buy Coins</button>
             </a>
           </div>
         </div>
-      </div>
-      <div class="flex">
-        <div class="flex">
-          <div class="p-px p-py rounded-full bg-gradient-to-b from-amber-600 to-yellow-400 max-w-fit mr-4 h-fit">
-            <div class="bg-[#191d32] rounded-full">
-              <a href="#" class="flex items-center p-2 rounded-full group">
-                <button type="button" class="flex-1 whitespace-nowrap text-xs text-white uppercase">Rewards</button>
-              </a>
-            </div>
+        <div class="hidden lg:block p-px p-py rounded-full bg-gradient-to-b from-amber-600 to-yellow-400 max-w-fit mr-4 h-fit">
+          <div class="bg-[#191d32] rounded-full">
+            <a href="#" class="flex items-center p-2 rounded-full group">
+              <button type="button" class="flex-1 whitespace-nowrap text-xs text-white uppercase">Rewards</button>
+            </a>
           </div>
         </div>
+      </div>
+      <div class="flex">
         <div class="flex flex-col">
           <span class="text-xs text-yellow-500 mb-0.5">Lv.12 SANDRA</span>
           <div class="w-full bg-gray-200 rounded-full h-2.5">
@@ -40,5 +38,6 @@
 import { ref } from 'vue'
 
 const isLogged = ref(true)
+
 const bar = ref('45%')
 </script>
