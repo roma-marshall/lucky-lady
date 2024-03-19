@@ -45,7 +45,7 @@
       <div class="flex flex-col h-full overflow-y-auto">
         <ul class="flex flex-col justify-center font-medium mx-auto mt-10">
           <img width="230" src="/casino-logo.png" alt="logo">
-          <div class="mt-10 mb-3 p-px p-py rounded-lg bg-gradient-to-r from-[#FBF338] to-[#7738FB]">
+          <div v-if="!isLogged" class="mt-10 mb-3 p-px p-py rounded-lg bg-gradient-to-r from-[#FBF338] to-[#7738FB]">
             <li class="bg-[#191d32] rounded-lg px-6 py-1">
               <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg group">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M12 14C8.13401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
@@ -53,13 +53,27 @@
               </a>
             </li>
           </div>
-          <div class="p-px p-py rounded-lg bg-gradient-to-r from-[#FBF338] to-[#7738FB]">
+          <div v-if="!isLogged" class="p-px p-py rounded-lg bg-gradient-to-r from-[#FBF338] to-[#7738FB]">
             <li class="bg-[#191d32] rounded-lg px-6 py-1">
               <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg group">
                 <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16">
                   <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 8h11m0 0L8 4m4 4-4 4m4-11h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-3"/>
                 </svg>
                 <span class="flex-1 ms-3 whitespace-nowrap text-white">Login</span>
+              </a>
+            </li>
+          </div>
+          <div v-if="isLogged" class="mt-10 p-px p-py rounded-lg bg-gradient-to-b from-amber-600 to-yellow-400">
+            <li class="bg-[#191d32] rounded-lg px-6 py-1">
+              <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg group">
+                <button type="button" class="flex-1 whitespace-nowrap text-white uppercase">Buy Coins</button>
+              </a>
+            </li>
+          </div>
+          <div v-if="isLogged" class="mt-5 p-px p-py rounded-lg bg-gradient-to-b from-amber-600 to-yellow-400">
+            <li class="bg-[#191d32] rounded-lg px-6 py-1">
+              <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg group">
+                <button type="button" class="flex-1 whitespace-nowrap text-white uppercase">Rewards</button>
               </a>
             </li>
           </div>
