@@ -3,7 +3,7 @@
     <div class="flex overflow-x-scroll overflow-hidden pb-5 lg:pb-0 mx-2">
       <div v-for="item in menu" class="p-px p-py rounded-lg bg-gradient-to-r from-[#FBF338] to-[#7738FB] max-w-fit mr-4">
         <div class="bg-[#191d32] rounded-lg px-1 py-0.5">
-          <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+          <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg group">
             <span class="flex-1 whitespace-nowrap text-white">{{ item }}</span>
           </a>
         </div>

@@ -1,6 +1,7 @@
 <template>
   <div class="p-1 sm:p-2 sm:ml-64 bg-[#191d32]">
     <div class="p-0.5 sm:p-2 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
+      <Header />
       <Carousel />
       <MainMenu />
       <div class="grid grid-cols-3 gap-4 my-4">
@@ -105,6 +106,7 @@
 </template>
 
 <script setup>
+import Header from './Header.vue'
 import Carousel from './Carousel.vue'
 import MainMenu from './MainMenu.vue'
 </script>
