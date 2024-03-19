@@ -1,18 +1,18 @@
 <template>
   <div class="bg-[#191d32]">
-    <div class="flex block sm:hidden pt-3">
+    <div class="flex justify-between block sm:hidden pt-3 items-center">
       <button @click="showMobile()" data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar" type="button" class="inline-flex items-center p-2 mt-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
         <span class="sr-only">Open sidebar</span>
         <svg class="w-6 h-6" aria-hidden="true" fill="#fff" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
         </svg>
       </button>
-      <img width="135" src="../../public/casino-logo.png" alt="logo">
+      <div v-if="!isLogged" class="flex">
+        <img width="135" src="/casino-logo.png" alt="logo">
         <div class="flex flex-row absolute right-0">
-
           <div class="p-px p-py rounded-lg bg-gradient-to-r from-[#FBF338] to-[#7738FB] mr-2">
             <div class="bg-[#191d32] rounded-lg px-1 py-0.5">
-              <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+              <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg group">
                 <span class="flex-1 whitespace-nowrap text-white">Sign Up</span>
               </a>
             </div>
@@ -27,27 +27,53 @@
             </div>
           </div>
         </div>
+      </div>
+      <div v-if="isLogged" class="flex space-x-1.5 mr-2">
+        <img class="w-auto h-8" src="/public/img3.png" alt="coins">
+        <div class="flex flex-col">
+          <span class="text-xs text-yellow-500 mb-0.5">Lv.12 SANDRA</span>
+          <div class="w-full bg-gray-200 rounded-full h-2.5">
+            <div class="border-2 border-yellow-500 bg-green-600 h-2.5 rounded-full" :style="`width: ${bar}`"></div>
+          </div>
+        </div>
+        <div class="ml-2 mt-0.5">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle opacity="1" cx="12" cy="9" r="3" stroke="#ffffff" stroke-width="1.5"></circle> <circle cx="12" cy="12" r="10" stroke="#ffffff" stroke-width="1.5"></circle> <path opacity="1" d="M17.9691 20C17.81 17.1085 16.9247 15 11.9999 15C7.07521 15 6.18991 17.1085 6.03076 20" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>
+        </div>
+      </div>
     </div>
-
     <aside id="default-sidebar" class="bg-[#191d32] fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
       <div class="flex flex-col h-full overflow-y-auto">
         <ul class="flex flex-col justify-center font-medium mx-auto mt-10">
-          <img width="230" src="../../public/casino-logo.png" alt="logo">
-          <div class="mt-10 mb-3 p-px p-py rounded-lg bg-gradient-to-r from-[#FBF338] to-[#7738FB]">
+          <img width="230" src="/casino-logo.png" alt="logo">
+          <div v-if="!isLogged" class="mt-10 mb-3 p-px p-py rounded-lg bg-gradient-to-r from-[#FBF338] to-[#7738FB]">
             <li class="bg-[#191d32] rounded-lg px-6 py-1">
-              <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+              <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg group">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M12 14C8.13401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                 <span class="flex-1 ms-3 whitespace-nowrap text-white">Sign Up</span>
               </a>
             </li>
           </div>
-          <div class="p-px p-py rounded-lg bg-gradient-to-r from-[#FBF338] to-[#7738FB]">
+          <div v-if="!isLogged" class="p-px p-py rounded-lg bg-gradient-to-r from-[#FBF338] to-[#7738FB]">
             <li class="bg-[#191d32] rounded-lg px-6 py-1">
-              <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16">
+              <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg group">
+                <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16">
                   <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 8h11m0 0L8 4m4 4-4 4m4-11h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-3"/>
                 </svg>
                 <span class="flex-1 ms-3 whitespace-nowrap text-white">Login</span>
+              </a>
+            </li>
+          </div>
+          <div v-if="isLogged" class="mt-10 p-px p-py rounded-lg bg-gradient-to-b from-amber-600 to-yellow-400">
+            <li class="bg-[#191d32] rounded-lg px-6 py-1">
+              <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg group">
+                <button type="button" class="flex-1 whitespace-nowrap text-white uppercase">Buy Coins</button>
+              </a>
+            </li>
+          </div>
+          <div v-if="isLogged" class="mt-5 p-px p-py rounded-lg bg-gradient-to-b from-amber-600 to-yellow-400">
+            <li class="bg-[#191d32] rounded-lg px-6 py-1">
+              <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg group">
+                <button type="button" class="flex-1 whitespace-nowrap text-white uppercase">Rewards</button>
               </a>
             </li>
           </div>
@@ -76,7 +102,7 @@
             </a>
           </li>
         </ul>
-        <button @click="showMobile()" data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar" type="button" class="absolute bottom-5 inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+        <button @click="showMobile()" data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar" type="button" class="absolute bottom-10 inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
           <span class="sr-only">Open sidebar</span>
           <svg class="w-6 h-6" aria-hidden="true" fill="#fff" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
@@ -88,6 +114,10 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
+
+const isLogged = ref(true)
+
 const showMobile = () => {
   document.querySelector('#default-sidebar').classList.toggle('-translate-x-full')
   document.querySelector('#default-sidebar').classList.toggle('w-full')
