@@ -72,7 +72,7 @@ const toggleMeMobile = () => {
   height: 25px;
   /*top: -2px;*/
   /*left: -2px;*/
-  background: url("./public/dollar-small.png");
+  background: url("../../../public/dollar-small.png");
   position: absolute;
   z-index: 40;
   display: inline-block;
