@@ -5,60 +5,65 @@
       <Carousel />
       <MainMenu />
 
-      <div class="flex justify-between mx-2">
-        <span class="text-lg text-[#e7f3f3] font-semibold">Top slots</span>
-        <button type="button" class="bg-[#3a4065] text-white px-4 py-2 rounded-lg text-sm">Show All</button>
-      </div>
 
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 my-4 mx-2">
-        <div v-for="item in topSlots" class="relative cursor-pointer" @click="openModal(item.name, item.imgScr)">
-          <div v-if="item.isAvailable" class="absolute left-1 top-1 z-20">
-            <Favorite />
+      <div id="gamesBackground" class="bg-gradient-to-r from-yellow-700 to-yellow-400 rounded-lg px-2 py-4">
+        <div class="flex justify-between mx-2">
+          <span class="text-lg text-[#e7f3f3] font-semibold">Top slots</span>
+          <button type="button" class="bg-[#3a4065] text-white px-4 py-2 rounded-lg text-sm">Show All</button>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 my-4 mx-2">
+          <div v-for="item in topSlots" class="relative cursor-pointer text-center" @click="openModal(item.name, item.imgScr)">
+            <div v-if="item.isAvailable" class="absolute left-1 top-1 z-20">
+              <Favorite />
+            </div>
+            <div v-else class="absolute right-1 bottom-7 z-20">
+              <Locked />
+            </div>
+            <img :class="{ 'opacity-50 saturate-50' : !item.isAvailable }" class="aspect-square rounded-lg" :src="item.imgScr" alt="games">
+            <span class="text-white text-sm text-center">{{ item.name }}</span>
           </div>
-          <div v-else class="absolute right-1 bottom-7 z-20">
-            <Locked />
+        </div>
+
+
+        <div class="flex justify-between mx-2 mt-10">
+          <span class="text-lg text-[#e7f3f3] font-semibold">Popular Games</span>
+          <button type="button" class="bg-[#3a4065] text-white px-4 py-2 rounded-lg text-sm">Show All</button>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 my-4 mx-2">
+          <div v-for="item in popularGames" class="relative cursor-pointer text-center" @click="openModal(item.name, item.imgScr)">
+            <div v-if="item.isAvailable" class="absolute left-1 top-1 z-20">
+              <Favorite />
+            </div>
+            <div v-else class="absolute right-1 bottom-7 z-20">
+              <Locked />
+            </div>
+            <img :class="{ 'opacity-50 saturate-50' : !item.isAvailable }" class="aspect-square rounded-lg" :src="item.imgScr" alt="games">
+            <span class="text-white text-sm text-center">{{ item.name }}</span>
           </div>
-          <img :class="{ 'opacity-50 saturate-50' : !item.isAvailable }" class="aspect-square rounded-lg" :src="item.imgScr" alt="games">
-          <span class="text-white text-sm text-center">{{ item.name }}</span>
+        </div>
+
+        <div class="flex justify-between mx-2 mt-10">
+          <span class="text-lg text-[#e7f3f3] font-semibold">New Games</span>
+          <button type="button" class="bg-[#3a4065] text-white px-4 py-2 rounded-lg text-sm">Show All</button>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 my-4 mx-2">
+          <div v-for="item in newGames" class="relative cursor-pointer text-center" @click="openModal(item.name, item.imgScr)">
+            <div v-if="item.isAvailable" class="absolute left-1 top-1 z-20">
+              <Favorite />
+            </div>
+            <div v-else class="absolute right-1 bottom-7 z-20">
+              <Locked />
+            </div>
+            <img :class="{ 'opacity-50 saturate-50' : !item.isAvailable }" class="aspect-square rounded-lg" :src="item.imgScr" alt="games">
+            <span class="text-white text-sm text-center">{{ item.name }}</span>
+          </div>
         </div>
       </div>
 
 
-      <div class="flex justify-between mx-2 mt-10">
-        <span class="text-lg text-[#e7f3f3] font-semibold">Popular Games</span>
-        <button type="button" class="bg-[#3a4065] text-white px-4 py-2 rounded-lg text-sm">Show All</button>
-      </div>
-
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 my-4 mx-2">
-        <div v-for="item in popularGames" class="relative cursor-pointer" @click="openModal(item.name, item.imgScr)">
-          <div v-if="item.isAvailable" class="absolute left-1 top-1 z-20">
-            <Favorite />
-          </div>
-          <div v-else class="absolute right-1 bottom-7 z-20">
-            <Locked />
-          </div>
-          <img :class="{ 'opacity-50 saturate-50' : !item.isAvailable }" class="aspect-square rounded-lg" :src="item.imgScr" alt="games">
-          <span class="text-white text-sm text-center">{{ item.name }}</span>
-        </div>
-      </div>
-
-      <div class="flex justify-between mx-2 mt-10">
-        <span class="text-lg text-[#e7f3f3] font-semibold">New Games</span>
-        <button type="button" class="bg-[#3a4065] text-white px-4 py-2 rounded-lg text-sm">Show All</button>
-      </div>
-
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 my-4 mx-2">
-        <div v-for="item in newGames" class="relative cursor-pointer" @click="openModal(item.name, item.imgScr)">
-          <div v-if="item.isAvailable" class="absolute left-1 top-1 z-20">
-            <Favorite />
-          </div>
-          <div v-else class="absolute right-1 bottom-7 z-20">
-            <Locked />
-          </div>
-          <img :class="{ 'opacity-50 saturate-50' : !item.isAvailable }" class="aspect-square rounded-lg" :src="item.imgScr" alt="games">
-          <span class="text-white text-sm text-center">{{ item.name }}</span>
-        </div>
-      </div>
       <ModalComponent :isOpen="isModalOpened" @modal-close="closeModal" @submit="submitHandler" name="first-modal">
         <template #header>&nbsp;</template>
         <template #content>

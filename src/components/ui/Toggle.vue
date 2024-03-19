@@ -38,6 +38,12 @@ const toggleMe = () => {
   document.querySelector('#number2').classList.toggle('text-green-500')
   document.querySelector('#number2').classList.toggle('!border-green-500')
   document.querySelector('#label').classList.toggle('!border-green-500')
+
+  document.querySelector('#gamesBackground').classList.toggle('from-yellow-700')
+  document.querySelector('#gamesBackground').classList.toggle('to-yellow-400')
+
+  document.querySelector('#gamesBackground').classList.toggle('from-green-800')
+  document.querySelector('#gamesBackground').classList.toggle('to-green-600')
 }
 
 const toggleMeMobile = () => {
@@ -50,6 +56,12 @@ const toggleMeMobile = () => {
   document.querySelector('#mobilenumber2').classList.toggle('text-green-500')
   document.querySelector('#mobilenumber2').classList.toggle('!border-green-500')
   document.querySelector('#mobilelabel').classList.toggle('!border-green-500')
+
+  document.querySelector('#gamesBackground').classList.toggle('from-yellow-700')
+  document.querySelector('#gamesBackground').classList.toggle('to-yellow-400')
+
+  document.querySelector('#gamesBackground').classList.toggle('from-green-800')
+  document.querySelector('#gamesBackground').classList.toggle('to-green-600')
 }
 </script>
 
