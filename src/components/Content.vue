@@ -59,9 +59,6 @@
           <span class="text-white text-sm text-center">{{ item.name }}</span>
         </div>
       </div>
-
-
-
       <ModalComponent :isOpen="isModalOpened" @modal-close="closeModal" @submit="submitHandler" name="first-modal">
         <template #header>&nbsp;</template>
         <template #content>
@@ -71,11 +68,13 @@
             </div>
             <img class="aspect-square rounded-lg" :src="img" alt="games">
             <span class="text-white text-lg text-center mt-4">{{ name }}</span>
-            <span class="text-white text-sm text-center mt-4">Some descriptions</span>
-            <div class="p-0.5 mt-4 rounded-lg bg-gradient-to-b from-amber-600 to-yellow-400">
+            <span class="text-white text-sm text-center mt-4">
+              {{ description }}
+            </span>
+            <div class="p-0.5 mt-4 rounded-lg bg-gradient-to-b from-amber-600 to-yellow-400 hover:from-[#FBF338] hover:to-[#7738FB]">
               <div class="bg-[#191d32] rounded-lg">
                 <a href="#" class="flex items-center p-3 rounded-lg group">
-                  <button type="button" class="flex-1 whitespace-nowrap text-xs text-white uppercase">Play</button>
+                  <button type="button" class="flex-1 whitespace-nowrap text-xl font-bold text-white uppercase">Play</button>
                 </a>
               </div>
             </div>
@@ -83,8 +82,6 @@
         </template>
         <template #footer>&nbsp;</template>
       </ModalComponent>
-
-
     </div>
   </div>
 </template>
@@ -117,6 +114,7 @@ const submitHandler = ()=>{
 }
 
 
+const description = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.'
 
 const topSlots = ref([
   {
