@@ -7,7 +7,7 @@
           <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
         </svg>
       </button>
-      <img width="135" src="../../public/casino-logo.png" alt="logo">
+      <img width="135" src="/casino-logo.png" alt="logo">
         <div class="flex flex-row absolute right-0">
 
           <div class="p-px p-py rounded-lg bg-gradient-to-r from-[#FBF338] to-[#7738FB] mr-2">
@@ -32,7 +32,7 @@
     <aside id="default-sidebar" class="bg-[#191d32] fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
       <div class="flex flex-col h-full overflow-y-auto">
         <ul class="flex flex-col justify-center font-medium mx-auto mt-10">
-          <img width="230" src="../../public/casino-logo.png" alt="logo">
+          <img width="230" src="/casino-logo.png" alt="logo">
           <div class="mt-10 mb-3 p-px p-py rounded-lg bg-gradient-to-r from-[#FBF338] to-[#7738FB]">
             <li class="bg-[#191d32] rounded-lg px-6 py-1">
               <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
@@ -76,7 +76,7 @@
             </a>
           </li>
         </ul>
-        <button @click="showMobile()" data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar" type="button" class="absolute bottom-5 inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+        <button @click="showMobile()" data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar" type="button" class="absolute bottom-10 inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
           <span class="sr-only">Open sidebar</span>
           <svg class="w-6 h-6" aria-hidden="true" fill="#fff" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
             <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
