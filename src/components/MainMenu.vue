@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-row justify-around my-2 sm:my-6 bg-[#0e1122] py-3 rounded-lg">
-    <div class="flex overflow-x-scroll overflow-hidden pb-5 lg:pb-0 mx-2">
-      <div v-for="item in menu" class="p-px p-py rounded-lg bg-gradient-to-r from-[#FBF338] to-[#7738FB] max-w-fit mr-4">
+    <div class="flex overflow-x-auto overflow-hidden pb-5 lg:pb-0 ml-2 space-x-4">
+      <div v-for="item in menu" class="p-px p-py rounded-lg bg-gradient-to-r from-[#FBF338] to-[#7738FB] max-w-fit">
         <div class="bg-[#191d32] rounded-lg px-1 py-0.5">
           <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg group">
             <span class="flex-1 whitespace-nowrap text-white">{{ item }}</span>
