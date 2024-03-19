@@ -12,10 +12,10 @@
 
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 my-4 mx-2">
         <div v-for="item in topSlots" class="relative cursor-pointer" @click="openModal(item.name, item.imgScr)">
-          <div v-if="item.isAvailable" class="absolute right-1 top-1 z-50">
+          <div v-if="item.isAvailable" class="absolute right-1 top-1 z-40">
             <Favorite />
           </div>
-          <div v-else class="absolute right-1 top-1 z-50">
+          <div v-else class="absolute right-1 top-1 z-40">
             <Locked />
           </div>
           <img :class="{ 'opacity-50 saturate-50' : !item.isAvailable }" class="aspect-square rounded-lg" :src="item.imgScr" alt="games">
@@ -31,10 +31,10 @@
 
       <div class="grid grid-cols-6 gap-4 my-4 mx-2">
         <div v-for="item in popularGames" class="relative cursor-pointer" @click="openModal(item.name, item.imgScr)">
-          <div v-if="item.isAvailable" class="absolute right-1 top-1 z-50">
+          <div v-if="item.isAvailable" class="absolute right-1 top-1 z-40">
             <Favorite />
           </div>
-          <div v-else class="absolute right-1 top-1 z-50">
+          <div v-else class="absolute right-1 top-1 z-40">
             <Locked />
           </div>
           <img :class="{ 'opacity-50 saturate-50' : !item.isAvailable }" class="aspect-square rounded-lg" :src="item.imgScr" alt="games">
@@ -49,10 +49,10 @@
 
       <div class="grid grid-cols-6 gap-4 my-4 mx-2">
         <div v-for="item in newGames" class="relative cursor-pointer" @click="openModal(item.name, item.imgScr)">
-          <div v-if="item.isAvailable" class="absolute right-1 top-1 z-50">
+          <div v-if="item.isAvailable" class="absolute right-1 top-1 z-40">
             <Favorite />
           </div>
-          <div v-else class="absolute right-1 top-1 z-50">
+          <div v-else class="absolute right-1 top-1 z-40">
             <Locked />
           </div>
           <img :class="{ 'opacity-50 saturate-50' : !item.isAvailable }" class="aspect-square rounded-lg" :src="item.imgScr" alt="games">
@@ -63,7 +63,7 @@
         <template #header>&nbsp;</template>
         <template #content>
           <div class="flex flex-col">
-            <div class="absolute right-1 top-1 z-50">
+            <div class="absolute right-1 top-1 z-40">
               <Favorite />
             </div>
             <img class="aspect-square rounded-lg" :src="img" alt="games">
