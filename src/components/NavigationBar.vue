@@ -1,7 +1,7 @@
 <template>
   <div class="bg-[#191d32]">
     <div class="flex justify-start block sm:hidden pt-3 items-center">
-      <button @click="showMobile()" data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar" type="button" class="inline-flex items-center p-2 mt-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+      <button @click="showMobile()" data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar" type="button" class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
         <span class="sr-only">Open sidebar</span>
         <svg class="w-6 h-6" aria-hidden="true" fill="#fff" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
@@ -28,16 +28,18 @@
           </div>
         </div>
       </div>
-      <div v-if="isLogged" class="flex space-x-1.5 mr-2">
-        <img class="w-auto h-8" src="/public/img3.png" alt="coins">
-        <div class="flex flex-col">
-          <span class="text-xs text-yellow-500 mb-0.5">Lv.12 SANDRA</span>
-          <div class="w-full bg-gray-200 rounded-full h-2.5">
-            <div class="border-2 border-yellow-500 bg-green-600 h-2.5 rounded-full" :style="`width: ${bar}`"></div>
+      <div v-if="isLogged" class="flex justify-between w-full space-x-1.5 mx-2">
+        <Toggle :isMobile="true" />
+        <div class="flex">
+          <div class="flex flex-col">
+            <span class="text-xs text-yellow-500 mb-0.5">Lv.12 SANDRA</span>
+            <div class="w-full bg-gray-200 rounded-full h-2.5">
+              <div class="border-2 border-yellow-500 bg-green-600 h-2.5 rounded-full" :style="`width: ${bar}`"></div>
+            </div>
           </div>
-        </div>
-        <div class="ml-2 mt-0.5">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle opacity="1" cx="12" cy="9" r="3" stroke="#ffffff" stroke-width="1.5"></circle> <circle cx="12" cy="12" r="10" stroke="#ffffff" stroke-width="1.5"></circle> <path opacity="1" d="M17.9691 20C17.81 17.1085 16.9247 15 11.9999 15C7.07521 15 6.18991 17.1085 6.03076 20" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>
+          <div class="ml-2 mt-0.5">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle opacity="1" cx="12" cy="9" r="3" stroke="#ffffff" stroke-width="1.5"></circle> <circle cx="12" cy="12" r="10" stroke="#ffffff" stroke-width="1.5"></circle> <path opacity="1" d="M17.9691 20C17.81 17.1085 16.9247 15 11.9999 15C7.07521 15 6.18991 17.1085 6.03076 20" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>
+          </div>
         </div>
       </div>
     </div>
@@ -118,6 +120,8 @@
 
 <script setup>
 import { ref } from 'vue'
+
+import Toggle from './ui/Toggle.vue'
 
 const isLogged = ref(true)
 

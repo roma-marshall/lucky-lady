@@ -1,9 +1,8 @@
 <template>
   <div id="mainheader" class="" v-if="isLogged">
     <div class="hidden sm:flex flex-row justify-between mb-2 text-white">
-      <div class="flex">
-        <img width="150" src="/public/img1.png" alt="coins">
-        <img width="150" class="mx-2" src="/public/img2.png" alt="coins">
+      <div class="flex items-center space-x-4">
+        <Toggle :isMovile="false" />
         <div class="hidden lg:block p-px p-py rounded-full bg-gradient-to-b from-amber-600 to-yellow-400 max-w-fit mr-4 h-fit">
           <div class="bg-[#191d32] rounded-full">
             <a href="#" class="flex items-center p-2 rounded-full group">
@@ -36,6 +35,7 @@
 
 <script setup>
 import { ref } from 'vue'
+import Toggle from './ui/Toggle.vue'
 
 const isLogged = ref(true)
 
