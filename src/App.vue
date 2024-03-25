@@ -1,6 +1,8 @@
 <template>
-  <NavigationBar />
-  <Content />
+  <div class="max-w-[1280px] mx-auto">
+    <NavigationBar />
+    <Content />
+  </div>
 </template>
 
 <script setup>
