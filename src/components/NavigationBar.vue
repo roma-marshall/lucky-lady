@@ -43,7 +43,7 @@
         </div>
       </div>
     </div>
-    <aside id="default-sidebar" class="bg-[#191d32] fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+    <aside id="default-sidebar" class="bg-[#191d32] absolute top-0 left-auto z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
       <div class="flex flex-col h-full overflow-y-auto">
         <ul class="flex flex-col justify-center font-medium mx-auto mt-10">
           <img width="230" src="/casino-logo.png" alt="logo">
