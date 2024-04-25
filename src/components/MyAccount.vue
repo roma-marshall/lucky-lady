@@ -36,7 +36,7 @@
           </div>
 
           <div v-if="active === 3">
-            {{ active }}
+            <SweepsTab />
           </div>
 
           <div v-if="active === 4">
@@ -59,6 +59,7 @@ import { TabGroup, TabList, Tab } from '@headlessui/vue'
 import AccountTab from './AccountTab.vue'
 import GameTab from './GameTab.vue'
 import TransactionTab from './TransactionTab.vue'
+import SweepsTab from './SweepsTab.vue'
 
 const active = ref(0)
 const pages = ref([
