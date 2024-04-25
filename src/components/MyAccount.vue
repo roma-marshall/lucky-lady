@@ -4,15 +4,15 @@
       <TabGroup>
         <TabList class="flex space-x-1 rounded-xl bg-[#1F253E] p-1">
           <Tab
-              v-for="(category, idx) in categories"
+              v-for="(page, idx) in pages"
               as="template"
-              :key="category"
+              :key="page"
               v-slot="{ selected }"
           >
             <div @click="active = idx" :class="{'bg-gradient-to-r from-[#FBF338] to-[#7738FB]' : selected}" class="h-fit p-px p-py rounded-lg max-w-fit outline-none">
               <div class="bg-[#191d32] rounded-lg px-1 py-0.5">
                 <span class="flex items-center p-2 text-gray-900 rounded-lg group flex-1 whitespace-nowrap text-white">
-                  {{ category }}
+                  {{ page }}
                 </span>
               </div>
             </div>
@@ -24,9 +24,8 @@
         <div class="rounded-xl bg-[#1F253E] p-3 mt-5 py-10">
 
           <div v-if="active === 0" class="flex flex-col xl:flex-row xl:justify-center mx-5 space-y-5 xl:space-y-0 xl:space-x-12">
-
             <div>
-              <div @click="openModal" class="mx-auto bg-white w-40 h-40 shadow rounded-lg">
+              <div @click="openModal" class="mx-auto w-40 h-40 shadow rounded-lg">
                 <img class="rounded aspect-square" :src="avatar" alt="">
               </div>
 
@@ -162,7 +161,7 @@ import PersonalData from './PersonalData.vue'
 import Locked from './ui/Locked.vue'
 
 const active = ref(0)
-const categories = ref([
+const pages = ref([
     'Account',
     'Game Play History',
     'Transaction History',
