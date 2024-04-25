@@ -4,7 +4,7 @@
       <Header />
 <!--      <Carousel />-->
 <!--      <MainMenu />-->
-      <GetCoins />
+<!--      <GetCoins />-->
 <!--      <Slots />-->
     </div>
   </div>
