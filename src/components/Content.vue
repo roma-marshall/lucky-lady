@@ -4,7 +4,7 @@
       <Header />
 <!--      <Carousel />-->
 <!--      <MainMenu />-->
-      <RewardStore />
+<!--      <GetCoins />-->
 <!--      <Slots />-->
     </div>
   </div>
@@ -16,4 +16,5 @@ import Carousel from './Carousel.vue'
 import MainMenu from './MainMenu.vue'
 import Slots from './Slots.vue'
 import RewardStore from './RewardStore.vue'
+import GetCoins from './GetCoins.vue'
 </script>
