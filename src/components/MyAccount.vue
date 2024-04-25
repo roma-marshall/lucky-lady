@@ -42,7 +42,7 @@
           </div>
 
           <div v-if="active === 5">
-            {{ active }}
+            <ReferralTab />
           </div>
 
         </div>
@@ -59,6 +59,7 @@ import GameTab from './GameTab.vue'
 import TransactionTab from './TransactionTab.vue'
 import SweepsTab from './SweepsTab.vue'
 import ResponsibleTab from './ResponsibleTab.vue'
+import ReferralTab from './ReferralTab.vue'
 
 const active = ref(0)
 const pages = ref([

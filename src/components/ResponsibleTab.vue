@@ -1,6 +1,5 @@
 <template>
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full">
-
     <div v-for="item in data" class="mx-auto w-full max-w-md rounded bg-[#191D32] p-2">
       <Disclosure v-slot="{ open }">
         <DisclosureButton
