@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <div class="my-5">
       <label for="isVerified" class="text-white mx-2">isVerified</label>
       <input name="isVerified" type="checkbox" @click="isVerified = !isVerified">
@@ -91,18 +90,15 @@
         </button>
       </div>
     </div>
-
   </div>
 </template>
 
 <script setup>
-import { CheckIcon } from '@heroicons/vue/20/solid'
-
 import { ref } from 'vue'
+import { CheckIcon } from '@heroicons/vue/20/solid'
 import Sort from './ui/Sort.vue'
 
 const isVerified = ref(false)
-
 const data = ref([
   {
     name: '$25 Amazon GiftCard',
