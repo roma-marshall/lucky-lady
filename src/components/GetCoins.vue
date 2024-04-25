@@ -138,7 +138,7 @@
           </div>
 
           <div class="flex space-x-4">
-            <div @click="isCodeOpen = !isCodeOpen" class="relative bg-[#282E41] rounded-lg shadow w-full w-1/3">
+            <div @click="isCodeOpen = !isCodeOpen" class="relative bg-[#282E41] rounded-lg shadow w-full md:w-1/3">
               <Code :isCodeOpen="isCodeOpen" />
               <label
                   class="absolute text-sm text-gray-300 duration-300 transform -translate-y-3 scale-75 top-0.5 z-10 origin-[0] px-2 peer-focus:px-2 peer-focus:text-gray-300 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-1.5 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1">
