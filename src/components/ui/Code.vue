@@ -75,10 +75,10 @@ import { ChevronDownIcon } from '@heroicons/vue/20/solid'
 
 const code = [
   {name: 'US'},
-  {name: 'code1'},
-  {name: 'code2'},
-  {name: 'code3'},
-  {name: 'code4'},
+  {name: 'code'},
+  {name: 'code'},
+  {name: 'code'},
+  {name: 'code'},
 ]
 const selectedCode = ref(code[0])
 const props = defineProps(['isCodeOpen'])
