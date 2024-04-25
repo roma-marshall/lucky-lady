@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@heroicons/react": "^2.1.3",
     "vue": "^3.4.21",
     "vue3-carousel": "^0.3.1"
   },
