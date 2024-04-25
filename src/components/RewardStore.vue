@@ -6,7 +6,63 @@
       <Sort />
     </div>
 
+    <div class="py-20">
+      <div class="bg-gray-200 mx-5 rounded-sm shadow">
+        <div class="flex justify-between shadow mb-3">
+          <span class="text-2xl font-semibold text-gray-700 px-5 py-2">Most Popular (8)</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-5 pb-10">
+          <div v-for="item in data" class="flex flex-col justify-center text-center shadow-xl rounded-lg p-5 bg-white">
+            <img class="rounded-lg shadow aspect-video" :src="item.img" alt="">
+            <span class="font-bold mt-5">{{ item.name }}</span>
+            <span class="text-red-500 font-semibold mb-3">Qty: {{ item.qty }}</span>
+            <div class="flex justify-center space-x-2 mb-4">
+              <span class="text-sm my-auto">Cost:</span>
+              <img class="rounded-full my-auto" src="https://placehold.co/24x24" alt="">
+              <span class="text-xl my-auto">{{ item.cost }}</span>
+            </div>
+            <button class="border-2 border-gray-500 rounded-lg py-1 px-auto text-sm mb-3">Add to Cart</button>
+            <button class="bg-green-700 text-white border-2 border-green-700 rounded-lg py-1 px-auto text-sm">WishList</button>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-5 pb-10">
+          <div v-for="item in data" class="flex flex-col justify-center text-center shadow-xl rounded-lg p-5 bg-white">
+            <img class="rounded-lg shadow aspect-video" :src="item.img" alt="">
+            <span class="font-bold mt-5">{{ item.name }}</span>
+            <span class="text-red-500 font-semibold mb-3">Qty: {{ item.qty }}</span>
+            <div class="flex justify-center space-x-2 mb-4">
+              <span class="text-sm my-auto">Cost:</span>
+              <img class="rounded-full my-auto" src="https://placehold.co/24x24" alt="">
+              <span class="text-xl my-auto">{{ item.cost }}</span>
+            </div>
+            <button class="border-2 border-gray-500 rounded-lg py-1 px-auto text-sm mb-3">Add to Cart</button>
+            <button class="bg-green-700 text-white border-2 border-green-700 rounded-lg py-1 px-auto text-sm">WishList</button>
+          </div>
+        </div>
+      </div>
 
+      <div class="my-10"></div>
+
+      <div class="bg-gray-200 mx-5 rounded-sm shadow">
+        <div class="flex justify-between shadow mb-3">
+          <span class="text-2xl font-semibold text-gray-700 px-5 py-2">All in one (4)</span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-5 pb-10">
+          <div v-for="item in data" class="flex flex-col justify-center text-center shadow-xl rounded-lg p-5 bg-white">
+            <img class="rounded-lg shadow aspect-video" :src="item.img" alt="">
+            <span class="font-bold mt-5">{{ item.name }}</span>
+            <span class="text-red-500 font-semibold mb-3">Qty: {{ item.qty }}</span>
+            <div class="flex justify-center space-x-2 mb-4">
+              <span class="text-sm my-auto">Cost:</span>
+              <img class="rounded-full my-auto" src="https://placehold.co/24x24" alt="">
+              <span class="text-xl my-auto">{{ item.cost }}</span>
+            </div>
+            <button class="border-2 border-gray-500 rounded-lg py-1 px-auto text-sm mb-3">Add to Cart</button>
+            <button class="bg-green-700 text-white border-2 border-green-700 rounded-lg py-1 px-auto text-sm">WishList</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </div>
 </template>
