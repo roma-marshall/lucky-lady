@@ -1,17 +1,25 @@
 <template>
   <div class="bg-white">
     <div class="flex flex-col md:flex-row justify-between mx-5 pt-10">
-      <span class="text-3xl my-auto">Rewards Store</span>
-      <div class="my-auto">You have [icon] RC 256.25 to redeem</div>
+      <span class="text-4xl my-auto">Rewards Store</span>
+      <div class="flex my-auto space-x-2">
+        <span class="my-auto">You have</span>
+        <img class="rounded-full my-auto" src="https://placehold.co/32x32" alt="">
+        <span class="my-auto text-orange-500 font-bold">RC 256.25</span>
+        <span class="my-auto">to redeem</span>
+      </div>
+    </div>
+
+    <div class="flex mx-5 justify-start md:justify-end mt-2 mb-5">
       <Sort />
     </div>
 
-    <div class="py-20">
+    <div class="pb-10">
       <div class="bg-gray-200 mx-5 rounded-sm shadow">
         <div class="flex justify-between shadow mb-3">
           <span class="text-2xl font-semibold text-gray-700 px-5 py-2">Most Popular (8)</span>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-5 pb-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-4 mx-5 pb-10">
           <div v-for="item in data" class="flex flex-col justify-center text-center shadow-xl rounded-lg p-5 bg-white">
             <img class="rounded-lg shadow aspect-video" :src="item.img" alt="">
             <span class="font-bold mt-5">{{ item.name }}</span>
@@ -25,7 +33,7 @@
             <button class="bg-green-700 text-white border-2 border-green-700 rounded-lg py-1 px-auto text-sm">WishList</button>
           </div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-5 pb-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-4 mx-5 pb-10">
           <div v-for="item in data" class="flex flex-col justify-center text-center shadow-xl rounded-lg p-5 bg-white">
             <img class="rounded-lg shadow aspect-video" :src="item.img" alt="">
             <span class="font-bold mt-5">{{ item.name }}</span>
@@ -47,7 +55,7 @@
         <div class="flex justify-between shadow mb-3">
           <span class="text-2xl font-semibold text-gray-700 px-5 py-2">All in one (4)</span>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-5 pb-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-4 mx-5 pb-10">
           <div v-for="item in data" class="flex flex-col justify-center text-center shadow-xl rounded-lg p-5 bg-white">
             <img class="rounded-lg shadow aspect-video" :src="item.img" alt="">
             <span class="font-bold mt-5">{{ item.name }}</span>
@@ -70,6 +78,8 @@
 <script setup>
 import { ref } from 'vue'
 import Sort from './ui/Sort.vue'
+
+
 
 const data = ref([
   {
