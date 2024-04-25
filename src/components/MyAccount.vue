@@ -23,29 +23,42 @@
           </Tab>
         </TabList>
 
-        <div class="rounded-xl bg-white p-3 mt-5">
+        <div class="rounded-xl bg-[#191d32] p-3 mt-5">
 
-          <div v-if="active === 0" >
+          <div v-if="active === 0" class="flex justify-between">
+            <div>
+              <div @click="openModal" class="mx-auto bg-white w-20 h-20 shadow rounded-lg">
+                <img class="rounded" :src="avatar" alt="">
+              </div>
+
+              <div class="flex flex-col text-center text-white text-sm">
+                <span class="mt-3">Select Profile Pic</span>
+                <span>Create Avatar</span>
+              </div>
+            </div>
+            <PersonalDetails />
+            <div>
+              <span class="text-white font-bold text-2xl">Login Details</span>
+            </div>
+          </div>
+
+          <div v-if="active === 1">
             {{ active }}
           </div>
 
-          <div v-if="active === 1" >
+          <div v-if="active === 2">
             {{ active }}
           </div>
 
-          <div v-if="active === 2" >
+          <div v-if="active === 3">
             {{ active }}
           </div>
 
-          <div v-if="active === 3" >
+          <div v-if="active === 4">
             {{ active }}
           </div>
 
-          <div v-if="active === 4" >
-            {{ active }}
-          </div>
-
-          <div v-if="active === 5" >
+          <div v-if="active === 5">
             {{ active }}
           </div>
 
@@ -55,12 +68,31 @@
 
 
 
+    <ModalComponent :isStateOpen="isModalOpened" @modal-close="closeModal" name="avatar-modal">
+      <template #header>&nbsp;</template>
+      <template #content>
+        <div class="flex flex-col">
+          <div class="absolute right-1 top-1 z-20">
+            <Favorite />
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <img @click="pickAvatar(1)" class="aspect-square rounded-lg" src="/avatar1.png">
+            <img @click="pickAvatar(2)" class="aspect-square rounded-lg" src="/avatar2.png">
+          </div>
+        </div>
+      </template>
+      <template #footer>&nbsp;</template>
+    </ModalComponent>
+
+
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-import { TabGroup, TabList, Tab, TabPanels, TabPanel } from '@headlessui/vue'
+import { TabGroup, TabList, Tab } from '@headlessui/vue'
+import ModalComponent from './ModalComponent.vue'
+import PersonalDetails from './PersonalDetails.vue'
 
 const active = ref(0)
 const categories = ref([
@@ -71,4 +103,19 @@ const categories = ref([
     'Responsible Gaming',
     'Referral Program'
 ])
+
+const isModalOpened = ref(false)
+const openModal = () => {
+  isModalOpened.value = true
+}
+
+const closeModal = () => {
+  isModalOpened.value = false
+}
+
+const avatar = ref('/avatar1.png')
+const pickAvatar = (id) => {
+  avatar.value = `/avatar${id}.png`
+  isModalOpened.value = false
+}
 </script>
