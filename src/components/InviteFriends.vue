@@ -9,7 +9,7 @@
 
     <span class="text-gray-400 text-left mb-2">Referral code:</span>
     <div class="flex justify-between space-x-3">
-      <span class="text-gray-400 bg-[#282E41] rounded-lg p-3 text-sm text-left w-full">IKOVG</span>
+      <span class="text-gray-400 bg-[#1F253E] rounded-lg p-3 text-sm text-left w-full">IKOVG</span>
       <div class="flex flex-col justify-center">
         <svg viewBox="0 -0.5 25 25" class="text-gray-400" width="24" height="24" fill="none"
              xmlns="http://www.w3.org/2000/svg">
@@ -26,7 +26,7 @@
 
     <span class="text-gray-400 text-left my-2">Referral link:</span>
     <div class="flex justify-between space-x-3">
-      <span class="text-gray-400 bg-[#282E41] rounded-lg p-3 text-sm text-left w-full">https://</span>
+      <span class="text-gray-400 bg-[#1F253E] rounded-lg p-3 text-sm text-left w-full">https://</span>
       <div class="flex flex-col justify-center">
         <svg viewBox="0 -0.5 25 25" class="text-gray-400" width="24" height="24" fill="none"
              xmlns="http://www.w3.org/2000/svg">
