@@ -38,7 +38,7 @@
             </div>
             <div class="flex flex-col">
               <span class="text-white font-semibold text-xl">Personal Details</span>
-              <PersonalDetails />
+              <PersonalData />
             </div>
             <div class="flex flex-col">
               <span class="text-white font-semibold text-xl">Login Details</span>
@@ -118,7 +118,7 @@
 import { ref } from 'vue'
 import { TabGroup, TabList, Tab } from '@headlessui/vue'
 import ModalComponent from './ModalComponent.vue'
-import PersonalDetails from './PersonalDetails.vue'
+import PersonalData from './PersonalData.vue'
 import Locked from './ui/Locked.vue'
 
 const active = ref(0)
