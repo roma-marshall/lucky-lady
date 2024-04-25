@@ -87,7 +87,7 @@
         <span class="text-lg w-2/3 mx-auto mb-3">To be able to redeem rewards, please complete your identity verification</span>
         <button class="flex max-w-fit mx-auto py-3 pl-2 pr-4 rounded-sm bg-[#84004D] hover:bg-[#84004D]/90 space-x-1 divide-x divide-white/30">
           <CheckIcon class="h-5 w-5 text-white my-auto" aria-hidden="true" />
-          <span class="text-white/70 px-2 text-sm">Start Verification</span>
+          <span class="text-slate-300 px-2 text-sm">Start Verification</span>
         </button>
       </div>
     </div>

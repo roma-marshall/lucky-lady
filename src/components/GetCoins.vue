@@ -43,7 +43,7 @@
         </span>
 
         <div class="my-5 space-y-5">
-          <div class="relative bg-gray-600/30 rounded-lg shadow w-full">
+          <div class="relative bg-[#282E41] rounded-lg shadow w-full">
             <input type="text" id="username"
                    class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-300 bg-transparent rounded-lg border-1 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                    placeholder=" "/>
@@ -57,7 +57,7 @@
           </div>
 
           <div class="flex space-x-4">
-            <div class="relative bg-gray-600/30 rounded-lg shadow w-full">
+            <div class="relative bg-[#282E41] rounded-lg shadow w-full">
               <input type="text" id="name"
                      class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-300 bg-transparent rounded-lg border-1 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                      placeholder=" "/>
@@ -70,7 +70,7 @@
               </div>
             </div>
 
-            <div class="relative bg-gray-600/30 rounded-lg shadow w-full">
+            <div class="relative bg-[#282E41] rounded-lg shadow w-full">
               <input type="text" id="surname"
                      class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-300 bg-transparent rounded-lg border-1 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                      placeholder=" "/>
@@ -85,7 +85,7 @@
           </div>
 
           <div class="flex space-x-4">
-            <div class="relative bg-gray-600/30 rounded-lg shadow w-full xl:w-[47%]">
+            <div class="relative bg-[#282E41] rounded-lg shadow w-full xl:w-[47%]">
               <input type="date" id="date"
                      class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-300 bg-transparent rounded-lg border-1 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                      placeholder=" "/>
@@ -95,7 +95,7 @@
               </label>
             </div>
 
-            <div class="relative bg-gray-600/30 rounded-lg shadow w-full">
+            <div class="relative bg-[#282E41] rounded-lg shadow w-full">
               <Country/>
               <label
                   class="absolute text-sm text-gray-300 duration-300 transform -translate-y-3 scale-75 top-0.5 z-10 origin-[0] px-2 peer-focus:px-2 peer-focus:text-gray-300 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-1.5 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1">
@@ -105,7 +105,7 @@
           </div>
 
           <div class="flex space-x-4">
-            <div class="relative bg-gray-600/30 rounded-lg shadow w-full">
+            <div class="relative bg-[#282E41] rounded-lg shadow w-full">
               <input type="text" id="address"
                      class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-300 bg-transparent rounded-lg border-1 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                      placeholder=" "/>
@@ -118,7 +118,7 @@
               </div>
             </div>
 
-            <div class="relative bg-gray-600/30 rounded-lg shadow w-full">
+            <div class="relative bg-[#282E41] rounded-lg shadow w-full">
               <input type="text" id="zipcode"
                      class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-300 bg-transparent rounded-lg border-1 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                      placeholder=" "/>
@@ -133,7 +133,7 @@
           </div>
 
           <div class="flex space-x-4">
-            <div class="relative bg-gray-600/30 rounded-lg shadow w-full">
+            <div class="relative bg-[#282E41] rounded-lg shadow w-full">
               <input type="text" id="City"
                      class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-300 bg-transparent rounded-lg border-1 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                      placeholder=" "/>
@@ -146,7 +146,7 @@
               </div>
             </div>
 
-            <div class="relative bg-gray-600/30 rounded-lg shadow w-full">
+            <div class="relative bg-[#282E41] rounded-lg shadow w-full">
               <State/>
               <label
                   class="absolute text-sm text-gray-300 duration-300 transform -translate-y-3 scale-75 top-0.5 z-10 origin-[0] px-2 peer-focus:px-2 peer-focus:text-gray-300 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-1.5 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1">
@@ -156,7 +156,7 @@
           </div>
 
           <div class="flex space-x-4">
-            <div class="relative bg-gray-600/30 rounded-lg shadow w-full w-1/3">
+            <div class="relative bg-[#282E41] rounded-lg shadow w-full w-1/3">
               <Code/>
               <label
                   class="absolute text-sm text-gray-300 duration-300 transform -translate-y-3 scale-75 top-0.5 z-10 origin-[0] px-2 peer-focus:px-2 peer-focus:text-gray-300 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-1.5 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1">
@@ -164,7 +164,7 @@
               </label>
             </div>
 
-            <div class="relative bg-gray-600/30 rounded-lg shadow w-full w-full">
+            <div class="relative bg-[#282E41] rounded-lg shadow w-full w-full">
               <input type="tel" id="phone"
                      class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-300 bg-transparent rounded-lg border-1 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                      placeholder=" "/>
@@ -181,7 +181,7 @@
 
         <button class="flex shadow max-w-fit mx-auto py-3 pl-2 pr-4 rounded-sm bg-[#84004D] hover:bg-[#84004D]/90 space-x-1 divide-x divide-white/30">
           <svg class="w-5 h-5" viewBox="0 0 64 64" fill="#ffffff" xmlns="http://www.w3.org/2000/svg"> <path d="M30.051 45.6071L17.851 54.7401C17.2728 55.1729 16.5856 55.4363 15.8662 55.5008C15.1468 55.5652 14.4237 55.4282 13.7778 55.1049C13.1319 54.7817 12.5887 54.2851 12.209 53.6707C11.8293 53.0563 11.6281 52.3483 11.628 51.626V15.306C11.628 13.2423 12.4477 11.2631 13.9069 9.8037C15.3661 8.34432 17.3452 7.52431 19.409 7.52405H45.35C47.4137 7.52431 49.3929 8.34432 50.8521 9.8037C52.3112 11.2631 53.131 13.2423 53.131 15.306V51.625C53.1309 52.3473 52.9297 53.0553 52.55 53.6697C52.1703 54.2841 51.6271 54.7807 50.9812 55.1039C50.3353 55.4272 49.6122 55.5642 48.8928 55.4998C48.1734 55.4353 47.4862 55.1719 46.908 54.739L34.715 45.6071C34.0419 45.1031 33.2238 44.8308 32.383 44.8308C31.5422 44.8308 30.724 45.1031 30.051 45.6071V45.6071Z" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" /> </svg>
-          <span class="text-white/70 px-2 text-sm w-40">Save</span>
+          <span class="text-slate-300 px-2 text-sm w-40">Save</span>
         </button>
       </div>
 
@@ -198,34 +198,18 @@
 
           <span class="text-gray-400 text-left mb-2">Referral code:</span>
           <div class="flex justify-between space-x-3">
-            <span class="text-gray-400 bg-gray-600/30 rounded-lg p-3 text-sm text-left w-full">IKOVG</span>
+            <span class="text-gray-400 bg-[#282E41] rounded-lg p-3 text-sm text-left w-full">IKOVG</span>
             <div class="flex flex-col justify-center">
-              <svg viewBox="0 -0.5 25 25" class="text-gray-400" width="24" height="24" fill="none"
-                   xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M17.676 14.248C17.676 15.8651 16.3651 17.176 14.748 17.176H7.428C5.81091 17.176 4.5 15.8651 4.5 14.248V6.928C4.5 5.31091 5.81091 4 7.428 4H14.748C16.3651 4 17.676 5.31091 17.676 6.928V14.248Z"
-                      stroke="#9cafa3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M10.252 20H17.572C19.1891 20 20.5 18.689 20.5 17.072V9.75195" stroke="#9cafa3"
-                      stroke-width="1.5"
-                      stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
+              <Copy />
               <span class="text-gray-400 text-[0.65rem]">COPY</span>
             </div>
           </div>
 
           <span class="text-gray-400 text-left my-2">Referral link:</span>
           <div class="flex justify-between space-x-3">
-            <span class="text-gray-400 bg-gray-600/30 rounded-lg p-3 text-sm text-left w-full">https://</span>
+            <span class="text-gray-400 bg-[#282E41] rounded-lg p-3 text-sm text-left w-full">https://</span>
             <div class="flex flex-col justify-center">
-              <svg viewBox="0 -0.5 25 25" class="text-gray-400" width="24" height="24" fill="none"
-                   xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M17.676 14.248C17.676 15.8651 16.3651 17.176 14.748 17.176H7.428C5.81091 17.176 4.5 15.8651 4.5 14.248V6.928C4.5 5.31091 5.81091 4 7.428 4H14.748C16.3651 4 17.676 5.31091 17.676 6.928V14.248Z"
-                      stroke="#9cafa3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M10.252 20H17.572C19.1891 20 20.5 18.689 20.5 17.072V9.75195" stroke="#9cafa3"
-                      stroke-width="1.5"
-                      stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
+              <Copy />
               <span class="text-gray-400 text-[0.65rem]">COPY</span>
             </div>
           </div>
@@ -292,4 +276,5 @@ import Code from './ui/Code.vue'
 import Ok from './ui/Ok.vue'
 import State from './ui/State.vue'
 import Country from './ui/Country.vue'
+import Copy from './ui/Copy.vue'
 </script>
