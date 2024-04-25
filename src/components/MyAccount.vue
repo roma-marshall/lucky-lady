@@ -2,14 +2,14 @@
   <div class="flex my-10 mx-5">
     <div class="w-full">
       <TabGroup>
-        <TabList class="flex space-x-1 rounded-xl bg-[#1F253E] p-1">
+        <TabList class="flex overflow-x-auto overflow-hidden rounded-xl bg-[#1F253E] p-2">
           <Tab
               v-for="(page, idx) in pages"
               as="template"
               :key="page"
               v-slot="{ selected }"
           >
-            <div @click="active = idx" :class="{'bg-gradient-to-r from-[#FBF338] to-[#7738FB]' : selected}" class="h-fit p-px p-py rounded-lg max-w-fit outline-none">
+            <div @click="active = idx" :class="{'bg-gradient-to-r from-[#FBF338] to-[#7738FB]' : selected}" class="h-fit p-px p-py mx-2 rounded-lg max-w-fit outline-none">
               <div class="bg-[#191d32] rounded-lg px-1 py-0.5">
                 <span class="flex items-center p-2 text-gray-900 rounded-lg group flex-1 whitespace-nowrap text-white">
                   {{ page }}
