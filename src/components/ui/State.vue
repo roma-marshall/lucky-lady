@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div>
     <Listbox v-model="selectedState">
       <div class="relative mt-1.5">
         <ListboxButton
@@ -8,11 +8,10 @@
           <span class="flex block truncate">
             <span>{{ selectedState.name }}</span>
           </span>
-          <span
-              class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2"
-          >
+          <span class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
             <ChevronDownIcon
-                class="h-5 w-5 text-gray-400"
+                class="h-5 w-5 text-gray-400 transition-all"
+                :class="{'rotate-180': props.isStateOpen}"
                 aria-hidden="true"
             />
           </span>
@@ -81,4 +80,5 @@ const state = [
   {name: 'Indiana'},
 ]
 const selectedState = ref(state[0])
+const props = defineProps(['isStateOpen'])
 </script>

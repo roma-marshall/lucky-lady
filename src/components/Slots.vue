@@ -57,7 +57,7 @@
   </div>
 
 
-  <ModalComponent :isOpen="isModalOpened" @modal-close="closeModal" @submit="submitHandler" name="first-modal">
+  <ModalComponent :isStateOpen="isModalOpened" @modal-close="closeModal" @submit="submitHandler" name="first-modal">
     <template #header>&nbsp;</template>
     <template #content>
       <div class="flex flex-col">

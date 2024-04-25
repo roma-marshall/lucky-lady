@@ -3,7 +3,7 @@ import { defineProps, defineEmits, ref } from 'vue'
 import { onClickOutside } from '@vueuse/core'
 
 const props = defineProps({
-  isOpen: Boolean,
+  isStateOpen: Boolean,
 });
 
 const emit = defineEmits(["modal-close"]);
@@ -14,7 +14,7 @@ onClickOutside(target, ()=>emit('modal-close'))
 </script>
 
 <template>
-  <div v-if="isOpen" class="modal-mask">
+  <div v-if="isStateOpen" class="modal-mask">
     <div class="modal-wrapper">
       <div class="modal-container bg-[#191d32] text-white rounded-lg" ref="target">
         <div class="modal-header">

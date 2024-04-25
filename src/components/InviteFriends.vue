@@ -1,6 +1,5 @@
 <template>
-  <div
-      class="flex flex-col text-center rounded-xl border-2 border-[#3C2550] shadow shadow-[#3C2550] p-4 min-h-80">
+  <div class="flex flex-col text-center rounded-xl border-2 border-[#3C2550] shadow shadow-[#3C2550] p-4 min-h-80">
     <span class="text-3xl text-white font-bold mb-3">Invite Friends</span>
     <div class="space-x-1 mb-6">
       <span class="text-gray-600">Get</span>
@@ -44,7 +43,3 @@
     <span class="mt-7 text-gray-700 text-[0.65rem]">Terms & Conditions</span>
   </div>
 </template>
-
-<script>
-import Copy from './ui/Copy.vue'
-</script>

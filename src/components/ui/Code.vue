@@ -9,11 +9,10 @@
             <IconUS />
             <span class="ml-2">{{ selectedCode.name }}</span>
           </span>
-          <span
-              class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2"
-          >
+          <span class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
             <ChevronDownIcon
-                class="h-5 w-5 text-gray-400"
+                class="h-5 w-5 text-gray-400 transition-all"
+                :class="{'rotate-180': props.isCodeOpen}"
                 aria-hidden="true"
             />
           </span>
@@ -82,4 +81,5 @@ const code = [
   {name: 'US'},
 ]
 const selectedCode = ref(code[0])
+const props = defineProps(['isCodeOpen'])
 </script>
