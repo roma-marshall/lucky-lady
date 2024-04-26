@@ -5,3 +5,23 @@
 html {
     background: #191d32;
 }
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
+
+.notification {
+    color: black !important;
+    font-size: 16px !important;
+    margin: 1rem !important;
+    padding: 0.75rem 1.25rem !important;
+    background: white !important;
+    border-radius: 10px !important;
+    border: 1px solid rgb(209 213 219) !important;
+}

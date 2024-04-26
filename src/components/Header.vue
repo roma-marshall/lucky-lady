@@ -5,16 +5,23 @@
         <Toggle :isMovile="false" />
         <div class="hidden lg:block p-px p-py rounded-full bg-gradient-to-b from-amber-600 to-yellow-400 max-w-fit mr-4 h-fit">
           <div class="bg-[#191d32] rounded-full">
-            <a href="#" class="flex items-center p-2 rounded-full group">
-              <button type="button" class="flex-1 whitespace-nowrap text-xs text-white uppercase">Buy Coins</button>
-            </a>
+            <router-link to="/account" class="flex items-center p-2 rounded-full group">
+              <button type="button" class="flex-1 whitespace-nowrap text-xs text-white uppercase">My Account</button>
+            </router-link>
           </div>
         </div>
         <div class="hidden lg:block p-px p-py rounded-full bg-gradient-to-b from-amber-600 to-yellow-400 max-w-fit mr-4 h-fit">
           <div class="bg-[#191d32] rounded-full">
-            <a href="#" class="flex items-center p-2 rounded-full group">
+            <router-link to="/coins" class="flex items-center p-2 rounded-full group">
+              <button type="button" class="flex-1 whitespace-nowrap text-xs text-white uppercase">Buy Coins</button>
+            </router-link>
+          </div>
+        </div>
+        <div class="hidden lg:block p-px p-py rounded-full bg-gradient-to-b from-amber-600 to-yellow-400 max-w-fit mr-4 h-fit">
+          <div class="bg-[#191d32] rounded-full">
+            <router-link to="/rewards" class="flex items-center p-2 rounded-full group">
               <button type="button" class="flex-1 whitespace-nowrap text-xs text-white uppercase">Rewards</button>
-            </a>
+            </router-link>
           </div>
         </div>
       </div>
