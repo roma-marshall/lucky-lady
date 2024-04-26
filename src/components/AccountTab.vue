@@ -42,8 +42,8 @@
 
     <span class="text-white text-xl font-semibold mt-5 mb-2">Bank details</span>
     <span class="text-white text-xs font-thin">
-                Please add your bank details if you want to redeem your Sweeps Coins.
-              </span>
+      Please add your bank details if you want to redeem your Sweeps Coins.
+    </span>
 
     <div class="flex relative bg-[#191d32] rounded-lg shadow w-full mt-5">
       <button class="p-3 w-full text-sm text-gray-300 bg-transparent rounded-lg">
@@ -53,8 +53,8 @@
 
     <span class="text-white text-xl font-semibold mt-10 mb-2">Communication</span>
     <span class="text-white text-xs font-thin">
-                Please select your preferred communication format.
-              </span>
+      Please select your preferred communication format.
+    </span>
 
     <div class="flex space-x-20">
       <div class="flex mt-5">
@@ -70,8 +70,8 @@
 
     <span class="text-white text-xl font-semibold mt-10 mb-2">Identity Verification</span>
     <span class="text-white text-xs font-thin">
-                Complete identity verification if you want to redeem your Sweeps coins.
-              </span>
+      Complete identity verification if you want to redeem your Sweeps coins.
+    </span>
 
     <div class="flex relative bg-[#191d32] rounded-lg shadow w-fit px-3 mt-5">
       <button class="p-3 w-full text-sm text-gray-300 bg-transparent rounded-lg">
@@ -98,7 +98,6 @@
 
 <script setup>
 import { ref } from 'vue'
-
 import Locked from './ui/Locked.vue'
 import PersonalData from './PersonalData.vue'
 import ModalComponent from './ModalComponent.vue'

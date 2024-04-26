@@ -15,8 +15,4 @@
 
 <script setup>
 import Header from './Header.vue'
-
-import RewardStore from './RewardStore.vue'
-import GetCoins from './GetCoins.vue'
-import MyAccount from './MyAccount.vue'
 </script>

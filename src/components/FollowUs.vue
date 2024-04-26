@@ -4,13 +4,8 @@
     <span class="text-lg text-gray-600 mx-auto">on there channels for sweet FREE bonus links!</span>
 
     <div class="flex mx-auto space-x-4 mt-7 mb-5">
-      <!-- Facebook -->
       <img class="h-14 w-auto" src="/fb.png" alt="">
-
-      <!-- Instagram -->
       <img class="h-14 w-auto" src="/ig.png" alt="">
-
-      <!-- Twitter -->
       <img class="h-14 w-auto" src="/x.png" alt="">
     </div>
 
