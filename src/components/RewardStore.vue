@@ -10,7 +10,7 @@
         <span class="text-4xl my-auto">Rewards Store</span>
         <div class="flex my-auto space-x-2">
           <span class="my-auto">You have</span>
-          <img class="rounded-full my-auto" src="https://placehold.co/32x32" alt="">
+          <img class="rounded-full my-auto h-8 w-auto" src="/gift.png" alt="">
           <span class="my-auto text-orange-500 font-bold">RC 256.25</span>
           <span class="my-auto">to redeem</span>
         </div>

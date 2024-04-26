@@ -5,8 +5,8 @@
 <!--      <Carousel />-->
 <!--      <MainMenu />-->
 <!--      <MyAccount />-->
-<!--      <GetCoins />-->
-      <RewardStore />
+      <GetCoins />
+<!--      <RewardStore />-->
 <!--      <Slots />-->
     </div>
   </div>
