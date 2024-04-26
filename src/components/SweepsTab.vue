@@ -31,5 +31,15 @@
 import { ref } from 'vue'
 import Pagination from './Pagination.vue'
 
-const data = ref([])
+const data = ref([
+  {
+    time: '',
+    txid: '',
+    coin: '',
+    trigger: '',
+    status: '',
+    init: '',
+    remain: '',
+  }
+])
 </script>
