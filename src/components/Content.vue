@@ -6,7 +6,7 @@
 <!--      <MainMenu />-->
 <!--      <MyAccount />-->
 <!--      <GetCoins />-->
-<!--      <RewardStore />-->
+      <RewardStore />
 <!--      <Slots />-->
     </div>
   </div>

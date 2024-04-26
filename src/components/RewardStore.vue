@@ -81,7 +81,7 @@
 
     <div v-if="!isVerified" class="bg-[#191d32] text-white my-20 h-screen">
       <div class="flex flex-col text-center justify-between">
-        <img src="https://placehold.co/300x200" class="flex mx-auto aspect-video mb-7" width="300" height="200" alt="">
+        <img src="/verify.png" class="flex mx-auto h-64 w-auto mb-7" width="300" height="200" alt="">
         <span class="text-2xl mb-6">Verify your account</span>
         <span class="text-lg w-2/3 mx-auto mb-3">To be able to redeem rewards, please complete your identity verification</span>
         <button class="flex max-w-fit mx-auto py-3 pl-2 pr-4 rounded-sm bg-[#84004D] hover:bg-[#84004D]/90 space-x-1 divide-x divide-white/30">
