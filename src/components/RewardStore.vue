@@ -32,7 +32,7 @@
               <span class="text-red-500 font-semibold mb-3">Qty: {{ item.qty }}</span>
               <div class="flex justify-center space-x-2 mb-4">
                 <span class="text-sm my-auto">Cost:</span>
-                <img class="rounded-full my-auto" src="https://placehold.co/24x24" alt="">
+                <img class="rounded-full my-auto h-7 w-auto" src="/gift.png" alt="">
                 <span class="text-xl my-auto">{{ item.cost }}</span>
               </div>
               <button class="border-2 border-gray-500 rounded-lg py-1 px-auto text-sm mb-3">Add to Cart</button>
@@ -46,7 +46,7 @@
               <span class="text-red-500 font-semibold mb-3">Qty: {{ item.qty }}</span>
               <div class="flex justify-center space-x-2 mb-4">
                 <span class="text-sm my-auto">Cost:</span>
-                <img class="rounded-full my-auto" src="https://placehold.co/24x24" alt="">
+                <img class="rounded-full my-auto h-7 w-auto" src="/gift.png" alt="">
                 <span class="text-xl my-auto">{{ item.cost }}</span>
               </div>
               <button class="border-2 border-gray-500 rounded-lg py-1 px-auto text-sm mb-3">Add to Cart</button>
@@ -68,7 +68,7 @@
               <span class="text-red-500 font-semibold mb-3">Qty: {{ item.qty }}</span>
               <div class="flex justify-center space-x-2 mb-4">
                 <span class="text-sm my-auto">Cost:</span>
-                <img class="rounded-full my-auto" src="https://placehold.co/24x24" alt="">
+                <img class="rounded-full my-auto h-7 w-auto" src="/gift.png" alt="">
                 <span class="text-xl my-auto">{{ item.cost }}</span>
               </div>
               <button class="border-2 border-gray-500 rounded-lg py-1 px-auto text-sm mb-3">Add to Cart</button>
