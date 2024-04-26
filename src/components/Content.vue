@@ -4,8 +4,8 @@
       <Header />
 <!--      <Carousel />-->
 <!--      <MainMenu />-->
-<!--      <MyAccount />-->
-      <GetCoins />
+      <MyAccount />
+<!--      <GetCoins />-->
 <!--      <RewardStore />-->
 <!--      <Slots />-->
     </div>

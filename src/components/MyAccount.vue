@@ -2,7 +2,7 @@
   <div class="flex my-10 mx-5">
     <div class="w-full">
       <TabGroup>
-        <TabList class="flex overflow-x-auto overflow-hidden rounded-xl bg-[#1F253E] p-2">
+        <TabList class="flex lg:justify-center overflow-x-auto overflow-hidden rounded-xl bg-[#1F253E] p-2">
           <Tab
               v-for="(page, idx) in pages"
               as="template"

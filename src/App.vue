@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-[1280px] mx-auto">
+  <div class="max-w-[1440px] mx-auto">
     <NavigationBar />
     <Content />
   </div>
