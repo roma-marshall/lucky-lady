@@ -48,7 +48,7 @@
     </div>
 
     <div class="flex space-x-4">
-      <div class="relative bg-[#1F253E] rounded-lg shadow w-[47%] sm:w-full">
+      <div class="relative bg-[#1F253E] rounded-lg shadow w-full xl:w-[47%]">
         <input type="date" id="date"
                class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-300 bg-transparent rounded-lg border-1 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
                placeholder=" "/>
