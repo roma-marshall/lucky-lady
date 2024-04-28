@@ -69,14 +69,21 @@
           </div>
           <div v-if="isLogged" class="block lg:hidden mt-10 p-px p-py rounded-lg bg-gradient-to-b from-amber-600 to-yellow-400">
             <li class="bg-[#191d32] rounded-lg px-6 py-1">
-              <router-link to="/coins" class="flex items-center p-2 text-gray-900 rounded-lg group">
+              <router-link @click="showMobile()" to="/account" class="flex items-center p-2 text-gray-900 rounded-lg group">
+                <button type="button" class="flex-1 whitespace-nowrap text-white uppercase">My Account</button>
+              </router-link>
+            </li>
+          </div>
+          <div v-if="isLogged" class="block lg:hidden mt-5 p-px p-py rounded-lg bg-gradient-to-b from-amber-600 to-yellow-400">
+            <li class="bg-[#191d32] rounded-lg px-6 py-1">
+              <router-link @click="showMobile()" to="/coins" class="flex items-center p-2 text-gray-900 rounded-lg group">
                 <button type="button" class="flex-1 whitespace-nowrap text-white uppercase">Buy Coins</button>
               </router-link>
             </li>
           </div>
           <div v-if="isLogged" class="block lg:hidden mt-5 p-px p-py rounded-lg bg-gradient-to-b from-amber-600 to-yellow-400">
             <li class="bg-[#191d32] rounded-lg px-6 py-1">
-              <router-link to="/rewards" class="flex items-center p-2 text-gray-900 rounded-lg group">
+              <router-link @click="showMobile()" to="/rewards" class="flex items-center p-2 text-gray-900 rounded-lg group">
                 <button type="button" class="flex-1 whitespace-nowrap text-white uppercase">Rewards</button>
               </router-link>
             </li>
