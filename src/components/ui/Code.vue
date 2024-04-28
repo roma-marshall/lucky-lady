@@ -24,7 +24,7 @@
             leave-to-class="opacity-0"
         >
           <ListboxOptions
-              class="z-50 absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-[#282E41] py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm"
+              class="z-50 absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-[#1F253E] py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm"
           >
             <ListboxOption
                 v-slot="{ active, selected }"
@@ -75,10 +75,10 @@ import { ChevronDownIcon } from '@heroicons/vue/20/solid'
 
 const code = [
   {name: 'US'},
-  {name: 'code1'},
-  {name: 'code2'},
-  {name: 'code3'},
-  {name: 'code4'},
+  {name: 'code'},
+  {name: 'code'},
+  {name: 'code'},
+  {name: 'code'},
 ]
 const selectedCode = ref(code[0])
 const props = defineProps(['isCodeOpen'])

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="my-5">
-      <label for="isVerified" class="text-white mx-2">isVerified</label>
+      <label class="text-white mx-2">isVerified</label>
       <input name="isVerified" type="checkbox" @click="isVerified = !isVerified">
     </div>
 
@@ -10,7 +10,7 @@
         <span class="text-4xl my-auto">Rewards Store</span>
         <div class="flex my-auto space-x-2">
           <span class="my-auto">You have</span>
-          <img class="rounded-full my-auto" src="https://placehold.co/32x32" alt="">
+          <img class="rounded-full my-auto h-8 w-auto" src="/gift.png" alt="">
           <span class="my-auto text-orange-500 font-bold">RC 256.25</span>
           <span class="my-auto">to redeem</span>
         </div>
@@ -32,7 +32,7 @@
               <span class="text-red-500 font-semibold mb-3">Qty: {{ item.qty }}</span>
               <div class="flex justify-center space-x-2 mb-4">
                 <span class="text-sm my-auto">Cost:</span>
-                <img class="rounded-full my-auto" src="https://placehold.co/24x24" alt="">
+                <img class="rounded-full my-auto h-7 w-auto" src="/gift.png" alt="">
                 <span class="text-xl my-auto">{{ item.cost }}</span>
               </div>
               <button class="border-2 border-gray-500 rounded-lg py-1 px-auto text-sm mb-3">Add to Cart</button>
@@ -46,7 +46,7 @@
               <span class="text-red-500 font-semibold mb-3">Qty: {{ item.qty }}</span>
               <div class="flex justify-center space-x-2 mb-4">
                 <span class="text-sm my-auto">Cost:</span>
-                <img class="rounded-full my-auto" src="https://placehold.co/24x24" alt="">
+                <img class="rounded-full my-auto h-7 w-auto" src="/gift.png" alt="">
                 <span class="text-xl my-auto">{{ item.cost }}</span>
               </div>
               <button class="border-2 border-gray-500 rounded-lg py-1 px-auto text-sm mb-3">Add to Cart</button>
@@ -68,7 +68,7 @@
               <span class="text-red-500 font-semibold mb-3">Qty: {{ item.qty }}</span>
               <div class="flex justify-center space-x-2 mb-4">
                 <span class="text-sm my-auto">Cost:</span>
-                <img class="rounded-full my-auto" src="https://placehold.co/24x24" alt="">
+                <img class="rounded-full my-auto h-7 w-auto" src="/gift.png" alt="">
                 <span class="text-xl my-auto">{{ item.cost }}</span>
               </div>
               <button class="border-2 border-gray-500 rounded-lg py-1 px-auto text-sm mb-3">Add to Cart</button>
@@ -81,7 +81,7 @@
 
     <div v-if="!isVerified" class="bg-[#191d32] text-white my-20 h-screen">
       <div class="flex flex-col text-center justify-between">
-        <img src="https://placehold.co/300x200" class="flex mx-auto aspect-video mb-7" width="300" height="200" alt="">
+        <img src="/verify.png" class="flex mx-auto h-64 w-auto mb-7" width="300" height="200" alt="">
         <span class="text-2xl mb-6">Verify your account</span>
         <span class="text-lg w-2/3 mx-auto mb-3">To be able to redeem rewards, please complete your identity verification</span>
         <button class="flex max-w-fit mx-auto py-3 pl-2 pr-4 rounded-sm bg-[#84004D] hover:bg-[#84004D]/90 space-x-1 divide-x divide-white/30">

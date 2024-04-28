@@ -46,7 +46,9 @@
     <aside id="default-sidebar" class="bg-[#191d32] absolute top-0 left-auto z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
       <div class="flex flex-col h-full overflow-y-auto">
         <ul class="flex flex-col justify-center font-medium mx-auto mt-10">
-          <img width="230" src="/casino-logo.png" alt="logo">
+          <router-link to="/">
+            <img width="230" src="/casino-logo.png" alt="logo">
+          </router-link>
           <div v-if="!isLogged" class="mt-10 mb-3 p-px p-py rounded-lg bg-gradient-to-r from-[#FBF338] to-[#7738FB]">
             <li class="bg-[#191d32] rounded-lg px-6 py-1">
               <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg group">
@@ -67,16 +69,16 @@
           </div>
           <div v-if="isLogged" class="block lg:hidden mt-10 p-px p-py rounded-lg bg-gradient-to-b from-amber-600 to-yellow-400">
             <li class="bg-[#191d32] rounded-lg px-6 py-1">
-              <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg group">
+              <router-link to="/coins" class="flex items-center p-2 text-gray-900 rounded-lg group">
                 <button type="button" class="flex-1 whitespace-nowrap text-white uppercase">Buy Coins</button>
-              </a>
+              </router-link>
             </li>
           </div>
           <div v-if="isLogged" class="block lg:hidden mt-5 p-px p-py rounded-lg bg-gradient-to-b from-amber-600 to-yellow-400">
             <li class="bg-[#191d32] rounded-lg px-6 py-1">
-              <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg group">
+              <router-link to="/rewards" class="flex items-center p-2 text-gray-900 rounded-lg group">
                 <button type="button" class="flex-1 whitespace-nowrap text-white uppercase">Rewards</button>
-              </a>
+              </router-link>
             </li>
           </div>
           <li class="mt-16">
@@ -120,7 +122,6 @@
 
 <script setup>
 import { ref } from 'vue'
-
 import Toggle from './ui/Toggle.vue'
 
 const isLogged = ref(true)
