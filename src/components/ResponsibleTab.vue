@@ -1,6 +1,6 @@
 <template>
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 w-full">
-    <div v-for="item in data" class="relative mx-auto w-full max-w-md rounded bg-[#191D32] p-2">
+    <div v-for="item in data" class="h-fit mx-auto w-full max-w-md rounded bg-[#191D32] p-2 shadow-xl">
       <Disclosure v-slot="{ open }">
         <DisclosureButton
             class="flex w-full justify-between rounded-lg px-4 py-2 text-left text-sm"
@@ -15,7 +15,7 @@
               class="h-5 w-5 text-gray-300 my-auto"
           />
         </DisclosureButton>
-        <DisclosurePanel class="absolute z-50 bg-[#191D32] shadow-xl h-32 left-0 w-full px-4 pb-2 pt-4 text-sm text-gray-500">
+        <DisclosurePanel class="z-50 bg-[#191D32] left-0 w-full px-4 pb-2 pt-4 text-sm text-gray-500">
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren
         </DisclosurePanel>
       </Disclosure>
