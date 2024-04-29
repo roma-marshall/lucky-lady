@@ -13,7 +13,7 @@
         <div class="truncate">Status</div>
       </div>
 
-      <div class="grid grid-cols-2 lg:grid-cols-7 gap-x-2 gap-y-4 lg:gap-4 p-5 text-center" v-for="item in data">
+      <div class="grid grid-cols-2 lg:grid-cols-7 gap-x-2 gap-y-4 lg:gap-4 p-5 text-center text-sm lg:text-base" v-for="item in data">
         <div class="text-left lg:text-center lg:space-y-0">
           <span class="block lg:hidden mb-2">Date:</span>
           <span class="truncate">{{ item.date }}</span>
