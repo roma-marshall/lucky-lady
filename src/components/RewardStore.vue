@@ -5,7 +5,7 @@
       <input name="isVerified" type="checkbox" @click="isVerified = !isVerified">
     </div>
 
-    <div v-if="isVerified" class="bg-white">
+    <div v-if="isVerified" class="bg-[#1F253E] text-white rounded">
       <div class="flex flex-col md:flex-row justify-between mx-5 pt-10">
         <span class="text-4xl my-auto">Rewards Store</span>
         <div class="flex my-auto space-x-2">
@@ -16,17 +16,17 @@
         </div>
       </div>
 
-      <div class="flex mx-5 justify-start md:justify-end mt-2 mb-5">
+      <div class="flex mx-5 justify-start md:justify-end mt-2 mb-5 text-black">
         <Sort />
       </div>
 
       <div class="pb-10">
-        <div class="bg-gray-200 mx-5 rounded-sm shadow">
-          <div class="flex justify-between shadow mb-3">
-            <span class="text-2xl font-semibold text-gray-700 px-5 py-2">Most Popular (8)</span>
+        <div class="bg-[#1F253E] mx-5 rounded-sm shadow">
+          <div class="bg-[#191d32] mx-5 rounded flex justify-between shadow mb-3">
+            <span class="text-2xl font-semibold text-white px-5 py-2">Most Popular (8)</span>
           </div>
           <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-4 mx-5 pb-10">
-            <div v-for="item in data" class="flex flex-col justify-center text-center shadow-xl rounded-lg p-5 bg-white">
+            <div v-for="item in data" class="flex flex-col justify-center text-center shadow-xl rounded-lg p-5 bg-[#191d32]">
               <img class="rounded-lg shadow aspect-video" :src="item.img" alt="">
               <span class="font-bold mt-5">{{ item.name }}</span>
               <span class="text-red-500 font-semibold mb-3">Qty: {{ item.qty }}</span>
@@ -40,7 +40,7 @@
             </div>
           </div>
           <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-4 mx-5 pb-10">
-            <div v-for="item in data" class="flex flex-col justify-center text-center shadow-xl rounded-lg p-5 bg-white">
+            <div v-for="item in data" class="flex flex-col justify-center text-center shadow-xl rounded-lg p-5 bg-[#191d32]">
               <img class="rounded-lg shadow aspect-video" :src="item.img" alt="">
               <span class="font-bold mt-5">{{ item.name }}</span>
               <span class="text-red-500 font-semibold mb-3">Qty: {{ item.qty }}</span>
@@ -57,12 +57,12 @@
 
         <div class="my-10"></div>
 
-        <div class="bg-gray-200 mx-5 rounded-sm shadow">
-          <div class="flex justify-between shadow mb-3">
-            <span class="text-2xl font-semibold text-gray-700 px-5 py-2">All in one (4)</span>
+        <div class="bg-[#1F253E] mx-5 rounded-sm shadow">
+          <div class="bg-[#191d32] mx-5 rounded flex justify-between shadow mb-3">
+            <span class="text-2xl font-semibold text-white px-5 py-2">All in one (4)</span>
           </div>
           <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-4 mx-5 pb-10">
-            <div v-for="item in data" class="flex flex-col justify-center text-center shadow-xl rounded-lg p-5 bg-white">
+            <div v-for="item in data" class="flex flex-col justify-center text-center shadow-xl rounded-lg p-5 bg-[#191d32]">
               <img class="rounded-lg shadow aspect-video" :src="item.img" alt="">
               <span class="font-bold mt-5">{{ item.name }}</span>
               <span class="text-red-500 font-semibold mb-3">Qty: {{ item.qty }}</span>
