@@ -28,19 +28,28 @@
       </div>
     </div>
 
-    <div>
-      <span class="text-white font-semibold text-xl mx-5">Referral program details</span>
+    <div class="space-y-5">
+      <span class="text-white font-semibold text-xl mx-0 sm:mx-5">Referral program details</span>
       <div class="rounded-lg bg-[#191D32] text-gray-300 divide-y divide-slate-800">
-        <div class="grid grid-cols-3 gap-4 mt-5 p-5 text-gray-300">
+        <div class="hidden lg:grid grid-cols-3 gap-4 mt-5 p-5 text-gray-300">
           <div class="truncate">Referred Users</div>
           <div class="truncate">Qualified Users</div>
           <div class="truncate">Rewards</div>
         </div>
 
-        <div class="grid grid-cols-3 gap-4 p-5">
-          <div class="truncate">0</div>
-          <div class="truncate">0</div>
-          <div class="truncate">0</div>
+        <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 p-5 text-sm lg:text-base">
+          <div class="text-left lg:space-y-0">
+            <div class="block lg:hidden mb-2">Referred Users</div>
+            <span>0</span>
+          </div>
+          <div class="text-left lg:space-y-0">
+            <div class="block lg:hidden mb-2">Qualified Users</div>
+            <span>0</span>
+          </div>
+          <div class="text-left lg:space-y-0">
+            <div class="block lg:hidden mb-2">Rewards</div>
+            <span>0</span>
+          </div>
         </div>
       </div>
     </div>
